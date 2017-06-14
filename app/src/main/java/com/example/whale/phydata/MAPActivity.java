@@ -15,7 +15,6 @@ import android.widget.Toast;
 public class MAPActivity extends AppCompatActivity {
     EditText etSBP,etDBP;
     Button btnCalcMAP,btnReturn3,btnSendMail3;
-    Button btnCalcMAP,btnReturn3;
     TextView tvMAPResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

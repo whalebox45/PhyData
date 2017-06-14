@@ -1,6 +1,9 @@
 package com.example.whale.phydata;
 
+<<<<<<< HEAD
 import android.content.Intent;
+=======
+>>>>>>> 5274e65dc98895c1d2ad3e63fd8f2186f053df6a
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,11 +14,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import static com.example.whale.phydata.R.id.btnSendMail2;
 
 public class BMIActivity extends AppCompatActivity {
     EditText etHeight2,etWeight2;
     Button btnCalcBMI,btnReturn2,btnSendMail2;
+=======
+public class BMIActivity extends AppCompatActivity {
+    EditText etHeight2,etWeight2;
+    Button btnCalcBMI,btnReturn2;
+>>>>>>> 5274e65dc98895c1d2ad3e63fd8f2186f053df6a
     TextView tvBMIResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +35,10 @@ public class BMIActivity extends AppCompatActivity {
         etWeight2 = (EditText) findViewById(R.id.etWeight2);
 
         btnCalcBMI = (Button) findViewById(R.id.btnCalcBMI);
+<<<<<<< HEAD
         btnSendMail2 = (Button) findViewById(R.id.btnSendMail2);
+=======
+>>>>>>> 5274e65dc98895c1d2ad3e63fd8f2186f053df6a
         btnReturn2 = (Button) findViewById(R.id.btnReturn2);
         tvBMIResult = (TextView) findViewById(R.id.tvBMIResult);
 
@@ -70,6 +82,7 @@ public class BMIActivity extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
         btnSendMail2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
@@ -86,6 +99,8 @@ public class BMIActivity extends AppCompatActivity {
             }
         });
 
+=======
+>>>>>>> 5274e65dc98895c1d2ad3e63fd8f2186f053df6a
         btnReturn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

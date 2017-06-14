@@ -1,6 +1,9 @@
 package com.example.whale.phydata;
 
+<<<<<<< HEAD
 import android.content.Intent;
+=======
+>>>>>>> 5274e65dc98895c1d2ad3e63fd8f2186f053df6a
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.annotation.IdRes;
@@ -44,7 +47,10 @@ public class IBWActivity extends AppCompatActivity {
         btnCalcIBW = (Button) findViewById(R.id.btnCalcIBW);
         tvIBWResult = (TextView) findViewById(R.id.tvIBWResult);
 
+<<<<<<< HEAD
         btnSendMail1 = (Button) findViewById(R.id.btnSendMail1);
+=======
+>>>>>>> 5274e65dc98895c1d2ad3e63fd8f2186f053df6a
         btnReturn1 = (Button) findViewById(R.id.btnReturn1);
 
         ragrpGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -96,6 +102,7 @@ public class IBWActivity extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
         btnSendMail1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
@@ -111,6 +118,8 @@ public class IBWActivity extends AppCompatActivity {
                 }
             }
         });
+=======
+>>>>>>> 5274e65dc98895c1d2ad3e63fd8f2186f053df6a
         btnReturn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

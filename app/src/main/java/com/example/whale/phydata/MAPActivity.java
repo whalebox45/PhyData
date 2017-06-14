@@ -1,9 +1,6 @@
 package com.example.whale.phydata;
 
-<<<<<<< HEAD
 import android.content.Intent;
-=======
->>>>>>> 5274e65dc98895c1d2ad3e63fd8f2186f053df6a
 import android.graphics.Color;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -17,11 +14,8 @@ import android.widget.Toast;
 
 public class MAPActivity extends AppCompatActivity {
     EditText etSBP,etDBP;
-<<<<<<< HEAD
     Button btnCalcMAP,btnReturn3,btnSendMail3;
-=======
     Button btnCalcMAP,btnReturn3;
->>>>>>> 5274e65dc98895c1d2ad3e63fd8f2186f053df6a
     TextView tvMAPResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +27,7 @@ public class MAPActivity extends AppCompatActivity {
 
         btnCalcMAP = (Button) findViewById(R.id.btnCalcMAP);
         tvMAPResult = (TextView) findViewById(R.id.tvMAPResult);
-<<<<<<< HEAD
         btnSendMail3 = (Button) findViewById(R.id.btnSendMail3);
-=======
->>>>>>> 5274e65dc98895c1d2ad3e63fd8f2186f053df6a
         btnReturn3 = (Button) findViewById(R.id.btnReturn3);
         btnCalcMAP.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,8 +55,6 @@ public class MAPActivity extends AppCompatActivity {
                 }
             }
         });
-<<<<<<< HEAD
-
         btnSendMail3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
@@ -81,8 +70,6 @@ public class MAPActivity extends AppCompatActivity {
                 }
             }
         });
-=======
->>>>>>> 5274e65dc98895c1d2ad3e63fd8f2186f053df6a
         btnReturn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

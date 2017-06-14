@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PhyData.iml" filepath="$PROJECT_DIR$/PhyData.iml" />
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/PhyData-master.iml" filepath="$PROJECT_DIR$/PhyData-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-=======
->>>>>>> 5274e65dc98895c1d2ad3e63fd8f2186f053df6a
+      <module fileurl="file://$PROJECT_DIR$/PhyData2.iml" filepath="$PROJECT_DIR$/PhyData2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.annotation.IdRes;
+import android.support.annotation.StringDef;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,8 @@ public class IBWActivity extends AppCompatActivity {
 
     // For Girls: Please don't blame about this plzzzzzzzzzz
     private boolean isMale = false;
+    private boolean isIdeal = true;
+    private boolean isCalc = false;
 
     RadioGroup ragrpGender;
     RadioButton radioMale,radioFemale;
@@ -28,6 +31,8 @@ public class IBWActivity extends AppCompatActivity {
     Button btnCalcIBW,btnSendMail1,btnReturn1;
 
     TextView tvIBWResult;
+
+    float weight = 0f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,33 +86,47 @@ public class IBWActivity extends AppCompatActivity {
 
 
                     if (weight <= idealWeight * 0.9f || weight >= idealWeight * 1.1f) {
+                        isIdeal = false;
                         tvIBWResult.setTextColor(Color.RED);
                     } else {
+                        isIdeal = true;
                         tvIBWResult.setTextColor(Color.BLUE);
                     }
 
                         tvIBWResult.setText("Your BW is " + weight + "kg\n" +
                                 "Normal Range of Your BW\n" + String.format("%.1f",idealWeight* 0.9f)+ "kg ~ " + String.format("%.1f",idealWeight*1.1f) + "kg");
+                    IBWActivity.this.weight = weight;
+
+                    isCalc = true;
                 }
                 catch(Exception e){
+
                     Toast.makeText(IBWActivity.this,"Please check your input again.",Toast.LENGTH_SHORT).show();
                     Log.e(e.toString(),e.toString());
+
+                    isCalc = false;
                 }
+
             }
         });
 
         btnSendMail1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                try {
+                    if(!isCalc) throw new Exception("Not calculated yet");
+                    if(isIdeal) throw new Exception("Ideal weight, no need to send mail");
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/rfc822");
-                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"recipient@example.com"});
-                i.putExtra(Intent.EXTRA_SUBJECT, "subject of email");
-                i.putExtra(Intent.EXTRA_TEXT   , "body of email");
-                try {
+                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"john.smith@abc.com.tw"});
+                i.putExtra(Intent.EXTRA_SUBJECT, "Warning Letter");
+                i.putExtra(Intent.EXTRA_TEXT   , "It is a goodwill letter to remind you that your body weight (" + String.format("%.1f",IBWActivity.this.weight)+" Kg)\n" +
+                        "exceeds 10% range of ideal body weight");
                     startActivity(Intent.createChooser(i, "Send mail..."));
                 } catch (android.content.ActivityNotFoundException ex) {
                     Toast.makeText(IBWActivity.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+                } catch (Exception e){
+                    Toast.makeText(IBWActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
         });
